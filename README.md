@@ -1,7 +1,6 @@
 # Huion Kamvas GT-191 Contrast Fix v0.1
 
 ## IMPORTANT INFO
-
 - Only works on Windows
 - Only tested on Windows 10 Professional 64-bit
 - Only works with NVIDIA graphics cards
@@ -9,7 +8,6 @@
 
 
 ## HOW TO USE
-
 #### BINARY
 1. Click "Clone or download" button on upper right hand side of the page
 2. Click "Download ZIP"
@@ -23,7 +21,6 @@
 
 
 ## IT DOESN'T WORK FOR ME
-
 There are certain elements that are out of my control when it comes to making a script like this work.
 For example, I don't know your screen resolution, font settings, window themes, etc.
 **If you want to make this work for yourself you can fix it yourself. AutoHotKey is very simple!** I will be adding a tutorial section onto the end of this once I have the time. But with a little bit of googling you can change where the cursor goes.
