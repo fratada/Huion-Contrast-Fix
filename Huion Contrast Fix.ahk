@@ -1,4 +1,5 @@
-﻿SetWorkingDir, %A_ScriptDir%
+﻿; Version 0.1.1
+SetWorkingDir, %A_ScriptDir%
 CoordMode, Mouse, Screen
 
 global DelayTimeLaunch := 1500 ; ms to wait after launch
@@ -45,8 +46,14 @@ ReadConfig()
         WriteDebug("Reading values from huionfix.cfg")
         DelayTimeLaunch := IniReadH("iDelayTimeLaunch", DelayTimeLaunch)
         DelayTimeResize := IniReadH("iDelayTimeResize", DelayTimeResize)
-        DelayTimeFix := IniReadH("iDelayTimeClick", DelayTimeClick)
+        DelayTimeClick := IniReadH("iDelayTimeClick", DelayTimeClick)
         DelayTimeClose := IniReadH("iDelayTimeClose", DelayTimeClose)
+        if (DelayTimeClick or DelayTimeResize or DelayTimeClick or DelayTimeClose is not integer)
+        {
+            MsgBox, 0, Huion Fix, There was a configuration error. One or more integers in %A_ScriptDir%\huionfix.cfg is not set to an integer.
+            WriteDebug("Program exited due to configuration error. One or more integers in " . A_ScriptDir . "\huionfix.cfg is not set to an integer.")
+            Exit
+        }
     }
 }
 
